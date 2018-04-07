@@ -3,23 +3,13 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const app = express();
 
-
-const colors = [
-  'red',
-  'orange',
-  'yellow',
-  'green',
-  'blue',
-  'purple'
-];
-
 app.use(bodyParser.urlencoded({extended: false}));	
 app.use(cookieParser());
 
 app.set('view engine', 'pug'); //tells express engine which template engine to use
 
 app.use((req, resp, next)=>{ //middleware
-req.message = 'This message made it!';
+req.message = 'Welcome!';
 next();
 })
 
