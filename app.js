@@ -29,7 +29,7 @@ else{
 });
 
 app.get('/cards', (req, resp)=>{
-resp.render('card', {prompt: "Who is buried in Grant's tomb?", colors});
+resp.render('card', {prompt: "Which location are you upto today?", colors});
 });
 
 app.get('/hello', (req, resp)=>{
